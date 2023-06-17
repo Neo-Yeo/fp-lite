@@ -60,7 +60,7 @@ const datas = [
 ]
 const grouped = pipe(
   datas,
-  groupBy(v => v.kind),
+  groupBy(v => v.kind)
 )
 ```
 
