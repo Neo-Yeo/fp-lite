@@ -1,5 +1,11 @@
 # fp-lite
 
+## 1.0.2
+
+### Patch Changes
+
+- doc: update example
+
 ## 1.0.1
 
 ### Patch Changes
