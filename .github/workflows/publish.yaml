@@ -44,5 +44,5 @@ jobs:
           with:
             token: ${{ secrets.GITHUB_TOKEN }}
             body: |
-            Please refer to [CHANGELOG.md](https://github.com/Neo-Yeo/fp-lite/blob/main/CHANGELOG.md) for details.
+              Please refer to [CHANGELOG.md](https://github.com/Neo-Yeo/fp-lite/blob/main/CHANGELOG.md) for details.
         
