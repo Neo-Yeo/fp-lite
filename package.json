@@ -32,6 +32,14 @@
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Neo-Yeo/fp-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Neo-Yeo/fp-lite/issues"
+  },
+  "homepage": "https://github.com/Neo-Yeo/fp-lite#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
     "prettier": "^2.8.8",
