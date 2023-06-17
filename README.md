@@ -65,7 +65,7 @@ const result = await asyncPipe(fetch('http://xx.json'), r => r.json())
 5. `asyncReduce` like reduce but handle Promise,
 
 ```typescript
-const one = (acc: number) => Promise.resolve(1) // no params async function only
+const one = (acc: number) => Promise.resolve(1)
 const two = (acc: number) => Promise.resolve(2)
 const sum = await asyncReduce([one, two], 0) //3
 ```
