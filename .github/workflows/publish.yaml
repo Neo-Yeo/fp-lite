@@ -5,8 +5,8 @@ on:
     types:
       - completed
   push:
-    branches:
-      - "main"
+    tags:
+      - "v*"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -29,7 +29,20 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: changeset publish
+          publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    build:
+      runs-on: ubuntu-latest
+      permissions:
+        contents: write
+      steps:
+        - uses: actions/checkout@v2
+        - uses: ncipollo/release-action@v1
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            body: |
+            Please refer to [CHANGELOG.md](https://github.com/Neo-Yeo/fp-lite/blob/main/CHANGELOG.md) for details.
+        
