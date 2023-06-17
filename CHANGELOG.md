@@ -1,5 +1,11 @@
 # fp-lite
 
+## 1.0.1
+
+### Patch Changes
+
+- doc: more detailed explantation
+
 ## 1.0.0
 
 ### Major Changes
