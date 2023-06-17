@@ -118,7 +118,7 @@ const result = pipe(
 
 ```ts
 const validate = () => {
-  throw new 'invalidate'()
+  throw new Error('invalidate')
 }
 
 const post = async data => axios.post('/api', data)
