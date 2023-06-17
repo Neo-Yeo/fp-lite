@@ -1,6 +1,5 @@
 export { asyncPipe } from './asyncPipe.js'
 export { asyncFlow } from './asyncFlow.js'
-export { asyncQueue } from './asyncQueue.js'
 export { pipe } from './pipe.js'
 export { filter } from './filter.js'
 export { flow } from './flow.js'
