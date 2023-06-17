@@ -123,7 +123,7 @@ const validate = () => {
 
 const post = async data => axios.post('/api', data)
 
-const submit = flow(validate, post) //
+const submit = flow(validate, post)
 
 submit({}).catch(e => {
   //捕捉不到错误, 因为 `validate` 不是异步函数

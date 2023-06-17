@@ -120,7 +120,7 @@ const validate = () => {
 
 const post = async data => axios.post('/api', data)
 
-const submit = flow(validate, post) //
+const submit = flow(validate, post)
 
 submit({}).catch(e => {
   //never reach, because `validate` is not async function
