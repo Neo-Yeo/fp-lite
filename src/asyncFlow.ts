@@ -1,23 +1,23 @@
 function asyncFlow<A extends ReadonlyArray<unknown>, B>(
-  a: (...a: A) => Promise<B>,
+  a: (...a: A) => Promise<B>
 ): (...args: A) => B
 
 function asyncFlow<A extends ReadonlyArray<unknown>, B, C>(
   a: (...a: A) => Promise<B>,
-  c: (x: Awaited<B>) => C,
+  c: (x: Awaited<B>) => C
 ): (...args: A) => C
 
 function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D>(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
-  d: (x: Awaited<C>) => D,
+  d: (x: Awaited<C>) => D
 ): (...args: A) => D
 
 function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E>(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
   d: (x: Awaited<C>) => D,
-  e: (x: Awaited<D>) => E,
+  e: (x: Awaited<D>) => E
 ): (...args: A) => E
 
 function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F>(
@@ -25,7 +25,7 @@ function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F>(
   c: (x: Awaited<B>) => C,
   d: (x: Awaited<C>) => D,
   e: (x: Awaited<D>) => E,
-  f: (x: Awaited<E>) => F,
+  f: (x: Awaited<E>) => F
 ): (...args: A) => F
 
 function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G>(
@@ -34,7 +34,7 @@ function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G>(
   d: (x: Awaited<C>) => D,
   e: (x: Awaited<D>) => E,
   f: (x: Awaited<E>) => F,
-  g: (x: Awaited<F>) => G,
+  g: (x: Awaited<F>) => G
 ): (...args: A) => G
 
 function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G, H>(
@@ -44,7 +44,7 @@ function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G, H>(
   e: (x: Awaited<D>) => E,
   f: (x: Awaited<E>) => F,
   g: (x: Awaited<F>) => G,
-  h: (x: Awaited<G>) => H,
+  h: (x: Awaited<G>) => H
 ): (...args: A) => H
 
 function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G, H, I>(
@@ -55,7 +55,7 @@ function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G, H, I>(
   f: (x: Awaited<E>) => F,
   g: (x: Awaited<F>) => G,
   h: (x: Awaited<G>) => H,
-  i: (x: Awaited<H>) => I,
+  i: (x: Awaited<H>) => I
 ): (...args: A) => I
 
 function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G, H, I, J>(
@@ -67,7 +67,7 @@ function asyncFlow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G, H, I, J>(
   g: (x: Awaited<F>) => G,
   h: (x: Awaited<G>) => H,
   i: (x: Awaited<H>) => I,
-  j: (x: Awaited<I>) => J,
+  j: (x: Awaited<I>) => J
 ): (...args: A) => J
 
 function asyncFlow<
@@ -81,7 +81,7 @@ function asyncFlow<
   H,
   I,
   J,
-  K,
+  K
 >(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
@@ -92,7 +92,7 @@ function asyncFlow<
   h: (x: Awaited<G>) => H,
   i: (x: Awaited<H>) => I,
   j: (x: Awaited<I>) => J,
-  k: (x: Awaited<J>) => K,
+  k: (x: Awaited<J>) => K
 ): (...args: A) => K
 
 function asyncFlow<
@@ -107,7 +107,7 @@ function asyncFlow<
   I,
   J,
   K,
-  L,
+  L
 >(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
@@ -119,7 +119,7 @@ function asyncFlow<
   i: (x: Awaited<H>) => I,
   j: (x: Awaited<I>) => J,
   k: (x: Awaited<J>) => K,
-  l: (x: Awaited<K>) => L,
+  l: (x: Awaited<K>) => L
 ): (...args: A) => L
 
 function asyncFlow<
@@ -135,7 +135,7 @@ function asyncFlow<
   J,
   K,
   L,
-  M,
+  M
 >(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
@@ -148,7 +148,7 @@ function asyncFlow<
   j: (x: Awaited<I>) => J,
   k: (x: Awaited<J>) => K,
   l: (x: Awaited<K>) => L,
-  m: (x: Awaited<L>) => M,
+  m: (x: Awaited<L>) => M
 ): (...args: A) => M
 
 function asyncFlow<
@@ -165,7 +165,7 @@ function asyncFlow<
   K,
   L,
   M,
-  N,
+  N
 >(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
@@ -179,7 +179,7 @@ function asyncFlow<
   k: (x: Awaited<J>) => K,
   l: (x: Awaited<K>) => L,
   m: (x: Awaited<L>) => M,
-  n: (x: Awaited<M>) => N,
+  n: (x: Awaited<M>) => N
 ): (...args: A) => N
 
 function asyncFlow<
@@ -197,7 +197,7 @@ function asyncFlow<
   L,
   M,
   N,
-  O,
+  O
 >(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
@@ -212,7 +212,7 @@ function asyncFlow<
   l: (x: Awaited<K>) => L,
   m: (x: Awaited<L>) => M,
   n: (x: Awaited<M>) => N,
-  o: (x: Awaited<N>) => O,
+  o: (x: Awaited<N>) => O
 ): (...args: A) => O
 
 function asyncFlow<
@@ -231,7 +231,7 @@ function asyncFlow<
   M,
   N,
   O,
-  P,
+  P
 >(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
@@ -247,7 +247,7 @@ function asyncFlow<
   m: (x: Awaited<L>) => M,
   n: (x: Awaited<M>) => N,
   o: (x: Awaited<N>) => O,
-  p: (x: Awaited<O>) => P,
+  p: (x: Awaited<O>) => P
 ): (...args: A) => P
 
 function asyncFlow<
@@ -267,7 +267,7 @@ function asyncFlow<
   N,
   O,
   P,
-  Q,
+  Q
 >(
   a: (...a: A) => Promise<B>,
   c: (x: Awaited<B>) => C,
@@ -284,7 +284,7 @@ function asyncFlow<
   n: (x: Awaited<M>) => N,
   o: (x: Awaited<N>) => O,
   p: (x: Awaited<O>) => P,
-  q: (x: Awaited<P>) => Q,
+  q: (x: Awaited<P>) => Q
 ): (...args: A) => Q
 
 function asyncFlow(

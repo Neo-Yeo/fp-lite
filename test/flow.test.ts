@@ -29,7 +29,7 @@ describe('test all functions', () => {
     let errorInDotCatch: unknown | null = null
     let errorInTryCatch: unknown | null = null
     try {
-      const result = await workFlow(2).catch((e) => {
+      const result = await workFlow(2).catch(e => {
         errorInDotCatch = e
       })
     } catch (error) {

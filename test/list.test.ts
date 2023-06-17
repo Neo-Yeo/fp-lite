@@ -22,7 +22,7 @@ describe('test list functions', () => {
     ]
     const group = pipe(
       list,
-      groupBy((v) => v.kind)
+      groupBy(v => v.kind)
     )
     expect(group.size).eq(2)
     expect(group.has('FrontEnd')).true
@@ -39,7 +39,7 @@ describe('test list functions', () => {
     ]
     const results = pipe(
       list,
-      separeBy((v) => v.kind)
+      separeBy(v => v.kind)
     )
     expect(results.length).eq(2)
     const [frontEndList, fullStackList] = results
@@ -60,13 +60,13 @@ describe('test list functions', () => {
     ]
     pipe(
       list,
-      peek(flow(first, (x) => expect(x).deep.eq(list[0]))),
-      peek(flow(last, (x) => expect(x).deep.eq(list[2]))),
-      groupBy((v) => v.kind),
-      (g) => g.values(),
+      peek(flow(first, x => expect(x).deep.eq(list[0]))),
+      peek(flow(last, x => expect(x).deep.eq(list[2]))),
+      groupBy(v => v.kind),
+      g => g.values(),
       toList,
       flat,
-      (xs) => expect(xs).deep.eq(listOut)
+      xs => expect(xs).deep.eq(listOut)
     )
   })
   test('deepFlat,unique,separeBy', () => {
@@ -76,10 +76,10 @@ describe('test list functions', () => {
     pipe(
       list,
       deepFlat(2),
-      peek((xs) => expect(xs.length).eq(heads.length * 2 + tails.length)),
+      peek(xs => expect(xs.length).eq(heads.length * 2 + tails.length)),
       unique,
-      peek((xs) => expect(xs.length).eq(heads.length + tails.length)),
-      peek((xs) => expect(xs).deep.eq([...heads, ...tails]))
+      peek(xs => expect(xs.length).eq(heads.length + tails.length)),
+      peek(xs => expect(xs).deep.eq([...heads, ...tails]))
     )
   })
 })
