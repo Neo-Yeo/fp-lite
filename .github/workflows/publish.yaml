@@ -5,8 +5,8 @@ on:
     types:
       - completed
   push:
-    tag:
-      - "v*"
+    branches:
+      - "main"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
