@@ -101,7 +101,7 @@ const result = pipe(
 
 `maybe` | `notNull`
 
-### Some Functions that just alias
+### Some Functions are just alias
 
 `waitAll` = Promise.all()\
 `toList` = Array.from()\
