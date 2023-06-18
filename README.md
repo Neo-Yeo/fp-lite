@@ -27,7 +27,7 @@ const handleSumbit = async formValues => {
 }
 
 //after
-const handleSumbitFp = asynFlow(validate, transform, post)
+const handleSumbitFp = asyncFlow(validate, transform, post)
 ```
 
 ### Functions for composition
@@ -105,7 +105,7 @@ const result = pipe(
 
 `waitAll` = Promise.all()\
 `toList` = Array.from()\
-`unique` = new Set()\
+`unique` = new Set()
 
 ### Normal Functions
 

@@ -108,7 +108,7 @@ const result = pipe(
 
 `waitAll` = Promise.all()\
 `toList` = Array.from()\
-`unique` = new Set()\
+`unique` = new Set()
 
 ### 普通函数
 

@@ -1,5 +1,11 @@
 # fp-lite
 
+## 1.0.3
+
+### Patch Changes
+
+- doc: typo
+
 ## 1.0.2
 
 ### Patch Changes
