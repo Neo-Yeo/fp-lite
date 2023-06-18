@@ -1,17 +1,20 @@
-function asyncPipe<A, B>(a: Promise<A>, b: (x: Awaited<A>) => B): B
+function asyncPipe<A, B>(
+  a: Promise<A>,
+  b: (x: Awaited<A>) => B
+): Promise<Awaited<B>>
 
 function asyncPipe<A, B, C>(
   a: Promise<A>,
   b: (x: Awaited<A>) => B,
   c: (x: Awaited<B>) => C
-): C
+): Promise<Awaited<C>>
 
 function asyncPipe<A, B, C, D>(
   a: Promise<A>,
   b: (x: Awaited<A>) => B,
   c: (x: Awaited<B>) => C,
   d: (x: Awaited<C>) => D
-): D
+): Promise<Awaited<D>>
 
 function asyncPipe<A, B, C, D, E>(
   a: Promise<A>,
@@ -19,7 +22,7 @@ function asyncPipe<A, B, C, D, E>(
   c: (x: Awaited<B>) => C,
   d: (x: Awaited<C>) => D,
   e: (x: Awaited<D>) => E
-): E
+): Promise<Awaited<E>>
 
 function asyncPipe<A, B, C, D, E, F>(
   a: Promise<A>,
@@ -28,7 +31,7 @@ function asyncPipe<A, B, C, D, E, F>(
   d: (x: Awaited<C>) => D,
   e: (x: Awaited<D>) => E,
   f: (x: Awaited<E>) => F
-): F
+): Promise<Awaited<F>>
 
 function asyncPipe<A, B, C, D, E, F, G>(
   a: Promise<A>,
@@ -38,7 +41,7 @@ function asyncPipe<A, B, C, D, E, F, G>(
   e: (x: Awaited<D>) => E,
   f: (x: Awaited<E>) => F,
   g: (x: Awaited<F>) => G
-): G
+): Promise<Awaited<G>>
 
 function asyncPipe<A, B, C, D, E, F, G, H>(
   a: Promise<A>,
@@ -49,7 +52,7 @@ function asyncPipe<A, B, C, D, E, F, G, H>(
   f: (x: Awaited<E>) => F,
   g: (x: Awaited<F>) => G,
   h: (x: Awaited<G>) => H
-): H
+): Promise<Awaited<H>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I>(
   a: Promise<A>,
@@ -61,7 +64,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I>(
   g: (x: Awaited<F>) => G,
   h: (x: Awaited<G>) => H,
   i: (x: Awaited<H>) => I
-): I
+): Promise<Awaited<I>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I, J>(
   a: Promise<A>,
@@ -74,7 +77,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I, J>(
   h: (x: Awaited<G>) => H,
   i: (x: Awaited<H>) => I,
   j: (x: Awaited<I>) => J
-): J
+): Promise<Awaited<J>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I, J, K>(
   a: Promise<A>,
@@ -88,7 +91,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I, J, K>(
   i: (x: Awaited<H>) => I,
   j: (x: Awaited<I>) => J,
   k: (x: Awaited<J>) => K
-): K
+): Promise<Awaited<K>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L>(
   a: Promise<A>,
@@ -103,7 +106,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L>(
   j: (x: Awaited<I>) => J,
   k: (x: Awaited<J>) => K,
   l: (x: Awaited<K>) => L
-): L
+): Promise<Awaited<L>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M>(
   a: Promise<A>,
@@ -119,7 +122,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M>(
   k: (x: Awaited<J>) => K,
   l: (x: Awaited<K>) => L,
   m: (x: Awaited<L>) => M
-): M
+): Promise<Awaited<M>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N>(
   a: Promise<A>,
@@ -136,7 +139,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N>(
   l: (x: Awaited<K>) => L,
   m: (x: Awaited<L>) => M,
   n: (x: Awaited<M>) => N
-): N
+): Promise<Awaited<N>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O>(
   a: Promise<A>,
@@ -154,7 +157,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O>(
   m: (x: Awaited<L>) => M,
   n: (x: Awaited<M>) => N,
   o: (x: Awaited<N>) => O
-): O
+): Promise<Awaited<O>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P>(
   a: Promise<A>,
@@ -173,7 +176,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P>(
   n: (x: Awaited<M>) => N,
   o: (x: Awaited<N>) => O,
   p: (x: Awaited<O>) => P
-): P
+): Promise<Awaited<P>>
 
 function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q>(
   a: Promise<A>,
@@ -193,7 +196,7 @@ function asyncPipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q>(
   o: (x: Awaited<N>) => O,
   p: (x: Awaited<O>) => P,
   q: (x: Awaited<P>) => Q
-): Q
+): Promise<Awaited<Q>>
 
 function asyncPipe(a: Promise<unknown>, ...rest: ((x: unknown) => unknown)[]) {
   return rest.reduce((acc, cur) => acc.then(cur), a)
