@@ -1,5 +1,11 @@
 # fp-lite
 
+## 1.1.0
+
+### Minor Changes
+
+- fix: type error when last param is not async fn
+
 ## 1.0.3
 
 ### Patch Changes
