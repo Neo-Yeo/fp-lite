@@ -1,5 +1,19 @@
 # fp-lite
 
+## 1.2.0
+
+### Minor Changes
+
+- Fix:
+
+  1. `peek` lossing type infer when work with console.log
+  2. remove unexport function `asyncReduce`
+
+  New:
+
+  1. `invoke`, like `peek` but for those not only console.log
+  2. `isEmpty` and `isZero` for checking empty
+
 ## 1.1.0
 
 ### Minor Changes
