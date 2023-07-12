@@ -1,17 +1,17 @@
 import { describe, expect, test } from 'vitest'
 import {
+  concat,
   deepFlat,
   first,
   flat,
   groupBy,
+  invoke,
   last,
+  pipe,
   separeBy,
   toList,
   unique,
-} from '../src/list.js'
-import { flow } from '../src/flow.js'
-import { peek } from '../src/peek.js'
-import { pipe } from '../src/pipe.js'
+} from '../src/index.js'
 
 describe('test list functions', () => {
   test('groupBy', () => {
@@ -58,10 +58,11 @@ describe('test list functions', () => {
       { name: 'Solid', kind: 'FrontEnd' },
       { name: 'NextJs', kind: 'FullStack' },
     ]
-    pipe(
+    const newLocal = pipe(
       list,
-      peek(flow(first, x => expect(x).deep.eq(list[0]))),
-      peek(flow(last, x => expect(x).deep.eq(list[2]))),
+      invoke(xs => expect(xs[0]).deep.eq(list[0])),
+      x => x,
+      invoke(xs => expect(xs.at(-1)).deep.eq(list[2])),
       groupBy(v => v.kind),
       g => g.values(),
       toList,
@@ -76,10 +77,36 @@ describe('test list functions', () => {
     pipe(
       list,
       deepFlat(2),
-      peek(xs => expect(xs.length).eq(heads.length * 2 + tails.length)),
+      invoke(xs => expect(xs.length).eq(heads.length * 2 + tails.length)),
       unique,
-      peek(xs => expect(xs.length).eq(heads.length + tails.length)),
-      peek(xs => expect(xs).deep.eq([...heads, ...tails]))
+      invoke(xs => expect(xs.length).eq(heads.length + tails.length)),
+      invoke(xs => expect(xs).deep.eq([...heads, ...tails]))
     )
+  })
+  test('concat both input is array', () => {
+    const readonlyList: readonly number[] = [1, 2, 3]
+    const list: number[] = [4, 5, 6]
+    pipe(readonlyList, concat(list), xs =>
+      expect(xs).deep.eq([...readonlyList, ...list])
+    )
+    pipe(list, concat(readonlyList), xs =>
+      expect(xs).deep.eq([...list, ...readonlyList])
+    )
+  })
+  test('concat complex input', () => {
+    const leader = 3
+    const list: number[] = [4, 5, 6]
+    pipe([leader], concat(list, 5, 6), xs =>
+      expect(xs).deep.eq([leader, ...list, 5, 6])
+    )
+    pipe(list, concat(leader), xs => expect(xs).deep.eq([...list, leader]))
+  })
+  test('first', () => {
+    const list = [1, 2, 3]
+    pipe(list, first, x => expect(x).eq(list[0]))
+  })
+  test('last', () => {
+    const list = [1, 2, 3]
+    pipe(list, last, x => expect(x).eq(list[2]))
   })
 })
