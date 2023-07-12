@@ -43,3 +43,9 @@ export const toList = <T>(xs: Iterable<T> | ArrayLike<T>) => Array.from(xs)
 
 export const waitAll = <T extends Parameters<typeof Promise.all>[0]>(ps: T) =>
   Promise.all(ps)
+;[1, 2].concat(1)
+/** concat array */
+export const concat =
+  <T>(...ys: (readonly T[] | T)[]) =>
+  (xs: T[] | readonly T[]) =>
+    xs.concat(...ys)
