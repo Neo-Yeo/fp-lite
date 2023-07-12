@@ -62,14 +62,6 @@ workFlow('http://xx.json')
 const result = await asyncPipe(fetch('http://xx.json'), r => r.json())
 ```
 
-5. `asyncReduce` 行为像 Array.reduce, 区别是它只处理异步函数
-
-```typescript
-const one = (acc: number) => Promise.resolve(1)
-const two = (acc: number) => Promise.resolve(2)
-const sum = await asyncReduce([one, two], 0) //3
-```
-
 ## 下面是跟组合函数一起使用的小函数
 
 ### 案列
@@ -90,19 +82,17 @@ const result = pipe(
 ```
 
 1. 处理数组 (常用的)
-
-`map` | `last` | `first` | `filter` | `flat` | `deepFlat` |`groupBy` | `separeBy` | `unique`
+   `map` | `filter` | `flat` | `concat`
+   | `unique` | `deepFlat` | `last` | `first`
 
 2. 处理对象
-
-`pick` | `omit`
+   `pick` | `omit`
 
 3. 条件判断
-
-`maybe` | `notNull`
+   `maybe` | `notNull` | `isEmpty` | `isZero`
 
 4. 其他
-   `peek`
+   `peek`|`invoke`
 
 ### 有些函数只是内建函数的别名
 

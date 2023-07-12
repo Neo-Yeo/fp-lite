@@ -30,7 +30,7 @@ const handleSumbit = async formValues => {
 const handleSumbitFp = asyncFlow(validate, transform, post)
 ```
 
-### Functions for composition
+### Begin composition
 
 1.  `flow` accept functions, return a function
 
@@ -62,14 +62,6 @@ workFlow('http://xx.json')
 const result = await asyncPipe(fetch('http://xx.json'), r => r.json())
 ```
 
-5. `asyncReduce` like reduce but handle Promise,
-
-```typescript
-const one = (acc: number) => Promise.resolve(1)
-const two = (acc: number) => Promise.resolve(2)
-const sum = await asyncReduce([one, two], 0) //3
-```
-
 ## Functions work with composition function
 
 ### Example
@@ -89,17 +81,21 @@ const result = pipe(
 )
 ```
 
-1. Array functions (frequently used)
+1. Array functions (frequently used)  
+   `map` | `filter` | `flat` | `concat`
+   | `unique` | `deepFlat` | `last` | `first`
 
-`map` | `last` | `first` | `filter` | `flat` | `deepFlat` |`groupBy` | `separeBy` | `unique`
+2. Functions for Object  
+   `pick` | `omit`
 
-2. Functions for Object
+3. Function for grouping
+   `groupBy` | `separeBy`
 
-`pick` | `omit`
+4. Functions for condition  
+   `maybe` | `notNull` | `isEmpty` | `isZero`
 
-3. Functions for condition
-
-`maybe` | `notNull`
+5. Other functions  
+   `invoke`
 
 ### Some Functions are just alias
 
