@@ -1,6 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { asyncPipe } from '../src/asyncPipe.js'
-import { pipe } from '../src/pipe.js'
+import { asyncPipe, pipe } from '../src/index.js'
 
 describe('test all functions', () => {
   test('pipe', () => {

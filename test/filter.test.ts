@@ -1,6 +1,5 @@
 import { expect, test } from 'vitest'
-import { pipe } from '../src/pipe.js'
-import { filter } from '../src/filter.js'
+import { filter, pipe } from '../src/index.js'
 
 test('filter type', () => {
   const input = [1, 2, 'sdf', new Date()]

@@ -1,7 +1,5 @@
 import { expect, test } from 'vitest'
-import { pipe } from '../src/pipe.js'
-import { pick, pickFn } from '../src/pick.js'
-import { omit, omitFn } from '../src/omit.js'
+import { omit, omitFn, pick, pickFn, pipe } from '../src/index.js'
 
 test('pick and omit', () => {
   const input = { name: 'React', kind: 'FrontEnd', id: 1 }

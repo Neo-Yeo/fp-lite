@@ -1,6 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { asyncFlow } from '../src/asyncFlow.js'
-import { flow } from '../src/flow.js'
+import { asyncFlow, flow } from '../src/index.js'
 
 describe('test all functions', () => {
   test('flow', () => {
